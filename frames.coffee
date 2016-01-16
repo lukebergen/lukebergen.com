@@ -1,4 +1,4 @@
-window.fp_ms = 0.06
+window.fp_ms = 60/1000
 window.t1 = 0
 window.t2 = 0
 
@@ -10,7 +10,7 @@ window.doit = (a,b,c) ->
   if window.turn == 3
     ms_diff = window.t2 - window.t1
     frame_diff = Math.floor(ms_diff * window.fp_ms)
-    alert("frames: #{frame_diff}")
+    console.log("frames: #{frame_diff}")
     window.turn = 1
   else
     window.turn = 2
